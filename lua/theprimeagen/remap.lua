@@ -56,3 +56,9 @@ vim.keymap.set("n", "<leader><leader>", function()
     vim.cmd("so")
 end)
 
+
+-- vim.keymap.set("n", "gr", vim.lsp.buf.definition)
+vim.keymap.set('n', 'gr', ':lua vim.lsp.buf.references()<CR>')
+
+vim.keymap.set('n', 'gy', '<cmd>didffget //3<CR>')
+vim.keymap.set('n', 'gt', '<cmd>didffget //2<CR>')
