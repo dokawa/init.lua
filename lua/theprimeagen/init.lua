@@ -75,3 +75,23 @@ vim.g.netrw_banner = 0
 vim.g.netrw_winsize = 25
 
 vim.g.ale_fix_on_save = 1
+
+
+vim.schedule(function()
+    vim.opt.clipboard = 'unnamedplus'
+  end)
+  
+vim.g.clipboard = {
+    name = 'myClipboard',
+    copy = {
+        ['+'] = 'clip.exe', 
+        ['*'] = 'clip.exe', 
+    },
+    paste = {
+        ['+'] = 'xclip -selection clipboard -o', 
+        ['*'] = 'xclip -selection clipboard -o', 
+    },
+    cache_enabled = 1,
+}
+
+

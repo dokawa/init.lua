@@ -23,7 +23,8 @@ end)
 vim.keymap.set("x", "<leader>p", [["_dP]])
 
 -- next greatest remap ever : asbjornHaland
-vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+--- vim.keymap.set({"n", "v"}, "<leader>y", [["+y]])
+vim.keymap.set({"n", "v"}, "<C-c>", [["+y]])
 vim.keymap.set("n", "<leader>Y", [["+Y]])
 
 vim.keymap.set({"n", "v"}, "<leader>d", [["_d]])
@@ -58,5 +59,7 @@ end)
 
 vim.keymap.set("n", "gr", vim.lsp.buf.references)
 
-vim.keymap.set('n', 'gy', '<cmd>didffget //3<CR>')
-vim.keymap.set('n', 'gt', '<cmd>didffget //2<CR>')
+vim.keymap.set("n", "gy", "<cmd>didffget //3<CR>")
+vim.keymap.set("n", "gt", "<cmd>didffget //2<CR>")
+
+
